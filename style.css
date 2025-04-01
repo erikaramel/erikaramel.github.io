@@ -254,3 +254,29 @@ body {
   transform: scale(1.05);
 }
 
+/* === Amélioration de l'affichage mobile === */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    top: 100%; /* ajuste si nécessaire selon ton design */
+  }
+
+  .dropbtn {
+    font-size: 0.95em;
+    padding: 6px 12px;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  body {
+    background-image: url("images/fond-mobile.jpg"); /* change si tu as un autre nom */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
