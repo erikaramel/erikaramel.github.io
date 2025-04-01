@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Patrick Hand', cursive;
-  background-image: url("images/banniere.png"); /* Fond Ghibli */
+  background-image: url("images/banniere.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,32 +34,32 @@ body {
 }
 
 .wood-banner {
-    width: 100%;
-    max-width: 900px;
-    height: 140px; /* Réduit la hauteur de la plaque */
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .nav-links {
-    position: absolute;
-    top: 60%; /* Avant : 55% */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 20px;
-  }
-  
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 12px;
+  z-index: 1;
+}
 
 .nav-links a {
   text-decoration: none;
   color: #fff8e1;
-  font-size: 1.2em;
-  padding: 6px 12px;
+  font-size: 1.1em;
+  padding: 4px 10px;
   background-color: rgba(80, 50, 20, 0.6);
-  border-radius: 6px;
+  border-radius: 4px;
   transition: background-color 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .nav-links a:hover {
@@ -67,26 +67,23 @@ body {
 }
 
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 200px);
-    padding: 60px 20px;
-}  
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
 
 .notebook {
-    background-color: rgba(255, 250, 230, 0.95);
-    border: 2px dashed #d1b892;
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 850px;
-    margin: auto; /* ← Ajoute cette ligne pour le centrer */
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    font-size: 1.2em;
-    line-height: 1.7em;
-    backdrop-filter: blur(2px);
+  background-color: rgba(255, 250, 230, 0.95);
+  border: 2px dashed #d1b892;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 850px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 1.2em;
+  line-height: 1.7em;
+  backdrop-filter: blur(2px);
+  margin: 0 auto;
 }
-  
 
 .notebook h1 {
   margin-top: 0;
@@ -97,18 +94,5 @@ body {
   border-radius: 10px;
   margin-top: 30px;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-}
-
-.notebook {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: apparitionDouce 1.2s ease-out forwards;
-  }
-  
-  @keyframes apparitionDouce {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
 }
   
