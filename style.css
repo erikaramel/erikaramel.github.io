@@ -259,4 +259,15 @@ body {
   }
 }
 
+/* 🎨 Fond d’écran spécial version mobile */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("images/fond-mobile.jpg");
+  }
+
+  .background {
+    background-image: url("images/fond-mobile.jpg");
+  }
+}
+
 
