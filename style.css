@@ -240,3 +240,17 @@ body {
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .dropdown-content {
+    min-width: 140px;
+    right: 0;
+    left: auto;
+  }
+
+  .dropdown-content a {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}
+
