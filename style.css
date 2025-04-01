@@ -43,12 +43,12 @@ body {
 
 .nav-links {
     position: absolute;
-    top: 35%;
+    top: 60%; /* ← On remonte ici à 60% au lieu de 35% ou 55% */
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     gap: 20px;
-}
+}  
   
 .nav-links a {
   text-decoration: none;
