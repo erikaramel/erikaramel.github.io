@@ -1,4 +1,4 @@
-/* Style Ghibli carnet avec fond et plaque en bois personnalisée */
+/** Style Ghibli carnet avec fond et plaque en bois personnalisée **/
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 body {
@@ -50,7 +50,7 @@ body {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  z-index: 15;
+  z-index: 5;
 }
 
 .dropdown {
@@ -58,7 +58,9 @@ body {
   display: inline-block;
 }
 
-.dropbtn {
+.dropbtn,
+.dropbtn:link,
+.dropbtn:visited {
   background-color: rgba(100, 70, 30, 0.5);
   color: #fff8e1;
   padding: 6px 14px;
@@ -71,18 +73,16 @@ body {
   font-family: 'Patrick Hand', cursive;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
-  position: relative;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Supprime les chevrons */
-.dropbtn::after {
-  content: '';
+.dropbtn:hover {
+  background-color: rgba(100, 70, 30, 0.8);
 }
 
 .dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -92,16 +92,6 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   min-width: 160px;
   z-index: 20;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(10px);
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
 }
 
 .dropdown-content a {
@@ -115,6 +105,10 @@ body {
 
 .dropdown-content a:hover {
   background-color: #f3e2c2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Partie centrale effet cahier */
@@ -165,7 +159,7 @@ body {
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
-/* ==== Galerie : Grille d’images ==== */
+/* Galerie */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -184,7 +178,7 @@ body {
   transform: scale(1.03);
 }
 
-/* ==== Articles ==== */
+/* Articles */
 .article-list {
   list-style-type: none;
   padding-left: 0;
@@ -208,7 +202,7 @@ body {
   color: #b16c2e;
 }
 
-/* ==== Portrait à propos ==== */
+/* Portrait */
 .portrait img {
   max-width: 220px;
   display: block;
@@ -222,39 +216,27 @@ body {
   transform: scale(1.05);
 }
 
-/* ======== Responsive Mobile Fix ======== */
+/* Mobile ajustements */
 @media (max-width: 768px) {
   .nav-links {
-    top: 68%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
+    flex-flow: row wrap;
     gap: 10px;
-    z-index: 15;
-  }
-
-  .dropdown-content {
-    position: static;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    display: none;
-    margin-top: 8px;
-  }
-
-  .dropdown.active .dropdown-content {
-    display: block;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: none;
+    width: 100%;
+    top: 78%;
   }
 
   .dropbtn {
-    font-size: 0.9em;
     padding: 6px 12px;
+    font-size: 0.95em;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
