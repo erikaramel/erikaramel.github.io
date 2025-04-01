@@ -30,7 +30,9 @@ body {
 .wooden-header {
   text-align: center;
   padding-top: 40px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
   z-index: 10;
 }
 
@@ -259,7 +261,9 @@ body {
     overflow-x: auto;
     justify-content: center;
     gap: 10px;
-    top: 100%;
+    top: 74%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .dropdown {
@@ -287,3 +291,4 @@ body {
     background-image: url("images/fond-mobile.jpg");
   }
 }
+
