@@ -44,7 +44,7 @@ body {
 
 .nav-links {
   position: absolute;
-  top: 74%; /* Légèrement plus bas pour corriger l’alignement */
+  top: 74%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -58,6 +58,7 @@ body {
   display: inline-block;
 }
 
+/* Boutons de navigation */
 .dropbtn {
   background-color: rgba(100, 70, 30, 0.5);
   color: #fff8e1;
@@ -74,16 +75,41 @@ body {
   position: relative;
 }
 
-/* ❌ Supprimé les chevrons ▼ */
+/* Supprime les chevrons ▼ */
 .dropbtn::after {
   content: '';
 }
 
-/* Pas besoin d’animation de rotation */
-.dropdown:hover .dropbtn::after {
-  transform: none;
+.dropdown:hover .dropbtn {
+  background-color: rgba(100, 70, 30, 0.8);
 }
 
+/* Lien "Accueil" intégré dans un <a> */
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a .dropbtn {
+  all: unset;
+  cursor: pointer;
+  padding: 6px 14px;
+  font-size: 1em;
+  border: 2px solid rgba(80, 50, 20, 0.4);
+  border-radius: 8px;
+  background-color: rgba(100, 70, 30, 0.5);
+  color: #fff8e1;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #4a3214, -1px -1px 0 #4a3214;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a .dropbtn:hover {
+  background-color: rgba(100, 70, 30, 0.8);
+}
+
+/* Sous-menus */
 .dropdown-content {
   opacity: 0;
   visibility: hidden;
@@ -136,7 +162,7 @@ body {
   z-index: 1;
 }
 
-/* ✅ Suppression du bord supérieur rayé */
+/* Suppression du bord supérieur rayé */
 .notebook::before {
   display: none;
 }
@@ -171,7 +197,7 @@ body {
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
-/* ==== Galerie : Grille d’images ==== */
+/* Galerie */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -190,7 +216,7 @@ body {
   transform: scale(1.03);
 }
 
-/* ==== Articles : Liste d’articles ==== */
+/* Articles */
 .article-list {
   list-style-type: none;
   padding-left: 0;
@@ -214,7 +240,7 @@ body {
   color: #b16c2e;
 }
 
-/* Portrait sur la page À propos */
+/* Portrait */
 .portrait img {
   max-width: 220px;
   display: block;
@@ -227,3 +253,4 @@ body {
 .portrait img:hover {
   transform: scale(1.05);
 }
+
