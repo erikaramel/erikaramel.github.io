@@ -44,3 +44,11 @@ body {
     color: #5a3e1b;
   }
   
+  .banniere {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom: 4px dashed #e2c8a0;
+    margin-bottom: 20px;
+  }
+  
