@@ -4,30 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carte interactive – Voyage poétique</title>
+  
+  <!-- Police et CSS perso -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
   <!-- jVectorMap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.css">
 
-  <!-- jQuery -->
+  <!-- jQuery et jVectorMap -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- jVectorMap -->
   <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/maps/jquery-jvectormap-world-mill.js"></script>
+
+  <!-- Fix affichage carte -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      width: 100%;
+      height: 500px;
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="background"></div>
-
-  <!-- Bandeau avec menu -->
+  <!-- Bandeau -->
   <header class="wooden-header">
     <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner" />
     <nav class="nav-links">
-      <div class="dropdown">
-        <a href="index.html" class="dropbtn">Accueil</a>
-      </div>
+      <div class="dropdown"><a href="index.html" class="dropbtn">Accueil</a></div>
       <div class="dropdown">
         <a href="#" class="dropbtn">Carnets</a>
         <div class="dropdown-content">
@@ -53,18 +64,17 @@
           <a href="carte.html">Carte interactive</a>
         </div>
       </div>
-    </nav>    
+    </nav>
   </header>
 
   <!-- Carte -->
   <main class="notebook">
     <h1>🌍 Carte interactive</h1>
     <p>Voici tous les pays que j'ai eu la chance de visiter. Clique dessus pour en découvrir plus !</p>
-
-    <div id="map" style="height: 500px; margin-top: 40px;"></div>
+    <div id="map"></div>
   </main>
 
-  <!-- Initialisation de la carte -->
+  <!-- Initialisation jVectorMap -->
   <script>
     $(document).ready(function () {
       $('#map').vectorMap({
@@ -97,14 +107,13 @@
               IT: '#f5b7b1', // Italie
               VN: '#f5b7b1', // Vietnam
               PT: '#f5b7b1', // Portugal
-              GR: '#f5b7b1', // Grèce
-              // Ajoute tous les pays que tu as visités ici (code ISO)
+              GR: '#f5b7b1'  // Grèce
+              // Ajoute ici tous tes pays !
             },
             attribute: 'fill'
           }]
         },
         onRegionClick: function (e, code) {
-          // Tu pourras mettre des redirections ici plus tard si tu veux
           alert("Tu as cliqué sur : " + code);
         }
       });
@@ -113,4 +122,3 @@
 
 </body>
 </html>
-
