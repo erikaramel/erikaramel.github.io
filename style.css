@@ -247,19 +247,16 @@ body {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .dropdown-content {
-    min-width: 140px;
-    right: 0;
-    left: auto;
+    min-width: 130px;
+    padding: 4px 0;
   }
 
   .dropdown-content a {
     font-size: 0.9em;
-    padding: 8px 12px;
+    padding: 6px 10px;
+    text-align: center;
+    white-space: nowrap;
   }
 }
+
 
