@@ -213,3 +213,17 @@ body {
 .article-list a:hover {
   color: #b16c2e;
 }
+
+/* Portrait sur la page À propos */
+.portrait img {
+  max-width: 220px;
+  display: block;
+  margin: 40px auto 10px auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.portrait img:hover {
+  transform: scale(1.05);
+}
