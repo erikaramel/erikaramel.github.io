@@ -1,91 +1,93 @@
-/* Feuille de style CSS pour le site d'Erikaramel - thème Ghibli doux */
-
-/* Police et fond général */
 body {
     margin: 0;
     font-family: 'Patrick Hand', cursive;
-    background-color: #fef8ec;
-    color: #4b2e2e;
-    line-height: 1.6;
+    background-color: #f3efe7;
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-repeat: repeat;
+    color: #4a3f35;
   }
   
-  /* En-tête avec image de fond Ghibli */
   header {
-    background-image: url("images/banner.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #fef3e1;
     text-align: center;
-    padding: 80px 20px 60px;
-    color: #fff;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
   }
   
-  header h1 {
-    font-size: 3em;
+  .banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom: 4px dashed #d6b97b;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fce7c0;
+    border-top: 1px dashed #d6b97b;
+    border-bottom: 1px dashed #d6b97b;
   }
   
-  nav {
-    margin-top: 20px;
+  nav ul li {
+    margin: 0 20px;
   }
   
-  nav a {
+  nav ul li a {
     text-decoration: none;
-    color: #fff;
-    margin: 0 15px;
+    color: #4a3f35;
     font-size: 1.2em;
+    padding: 10px;
+    display: block;
     transition: color 0.3s;
   }
   
-  nav a:hover {
-    color: #ffe09d;
+  nav ul li a:hover {
+    color: #c57b57;
   }
   
-  /* Corps principal */
   main {
-    max-width: 800px;
-    margin: auto;
     padding: 40px 20px;
-    background-color: #fffaf1;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fffef9;
+    border: 3px dashed #d6b97b;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 100% 32px;
   }
   
-  .intro-box {
-    background-color: #fff4dd;
+  .intro {
+    background-color: #fffbe9;
+    border: 2px dashed #d6b97b;
     padding: 20px;
-    border-radius: 10px;
-    border: 2px dashed #d8ba91;
     margin-bottom: 30px;
-    font-size: 1.2em;
-  }
-  
-  .illustration {
-    width: 100%;
-    border: 3px solid #e4cfa2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
   }
   
-  /* Pied de page */
+  .intro h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    border: 3px solid #d6b97b;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
   footer {
+    background-color: #fce7c0;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     font-size: 0.9em;
-    background-color: #f9e1c5;
-    color: #5c4331;
-  }
-  
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2em;
-    }
-    nav a {
-      font-size: 1em;
-    }
-    .intro-box {
-      font-size: 1em;
-    }
+    color: #7c6a58;
+    border-top: 1px dashed #d6b97b;
+    margin-top: 40px;
+    border-radius: 0 0 12px 12px;
   }
   
