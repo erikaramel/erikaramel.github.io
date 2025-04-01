@@ -44,13 +44,13 @@ body {
 
 .nav-links {
   position: absolute;
-  top: 72%; /* ↓ Ajusté pour les centrer mieux verticalement */
+  top: 72%; /* ↓ Ajusté ici */
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  z-index: 15;
+  z-index: 5;
 }
 
 .dropdown {
@@ -74,23 +74,21 @@ body {
   position: relative;
 }
 
-/* Chevron ↓ */
+/* Chevron ▼ */
 .dropbtn::after {
   content: " ▼";
   font-size: 0.8em;
   transition: transform 0.3s ease;
 }
 
-/* Pivoter le chevron au hover */
 .dropdown:hover .dropbtn::after {
   transform: rotate(180deg);
 }
 
-/* Menu déroulant */
 .dropdown-content {
-  display: block;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -102,18 +100,17 @@ body {
   z-index: 20;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px);
-  pointer-events: none;
 }
 
-/* Apparition fluide */
-.dropdown:hover .dropdown-content {
+/* Astuce pour éviter que le menu disparaisse trop vite */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
   pointer-events: auto;
+  transform: translateY(0);
 }
 
-/* Liens du menu */
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
