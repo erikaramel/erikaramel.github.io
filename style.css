@@ -44,7 +44,7 @@ body {
 
 .nav-links {
   position: absolute;
-  top: 68%;
+  top: 72%; /* ↓ Ajusté pour les centrer mieux verticalement */
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -71,12 +71,28 @@ body {
   font-family: 'Patrick Hand', cursive;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
+  position: relative;
 }
 
+/* Chevron ↓ */
+.dropbtn::after {
+  content: " ▼";
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+/* Pivoter le chevron au hover */
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
+}
+
+/* Menu déroulant */
 .dropdown-content {
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  top: 110%;
+  top: 100%;
   left: 0;
   background-color: #fffbe6;
   border-radius: 8px;
@@ -84,27 +100,33 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   min-width: 160px;
   z-index: 20;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  pointer-events: none;
 }
 
+/* Apparition fluide */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Liens du menu */
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
   color: #4e3d2b;
   text-decoration: none;
   font-size: 0.95em;
+  transition: background-color 0.2s ease;
 }
 
 .dropdown-content a:hover {
   background-color: #f3e2c2;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: rgba(100, 70, 30, 0.8);
-}
 
 /* Partie centrale effet cahier */
 
