@@ -14,12 +14,39 @@
 
   <!-- En-tête en bois avec navigation -->
   <header class="wooden-header">
-    <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner"/>
+    <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner" />
     <nav class="nav-links">
-      <a href="#">Accueil</a>
-      <a href="#">Carnets</a>
-      <a href="#">Galerie</a>
-      <a href="#">À propos</a>
+      <div class="dropdown">
+        <a href="index.html" class="dropbtn">Accueil</a>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Carnets</button>
+        <div class="dropdown-content">
+          <a href="carnets-europe.html">Europe</a>
+          <a href="carnets-afrique.html">Afrique</a>
+          <a href="carnets-asie.html">Asie</a>
+          <a href="carnets-tous.html">Tous les pays</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Inspiration</button>
+        <div class="dropdown-content">
+          <a href="galerie.html">Galerie</a>
+          <a href="blog.html">Articles</a>
+          <a href="apropos.html">À propos</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Pratique</button>
+        <div class="dropdown-content">
+          <a href="materiel.html">Matériel photo</a>
+          <a href="visa.html">Visa & infos</a>
+          <a href="carte.html">Carte interactive</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -40,4 +67,5 @@
 
 </body>
 </html>
+
 
