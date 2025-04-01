@@ -3,25 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte interactive – Voyage poétique d'Erika</title>
+  <title>Carte interactive – Voyage poétique</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <script src="js/visited_states_snippet.js"></script>
-  <script src="js/worldmap.js"></script>
+
+  <!-- jVectorMap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jVectorMap -->
+  <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/maps/jquery-jvectormap-world-mill.js"></script>
 </head>
 <body>
 
   <div class="background"></div>
 
+  <!-- Bandeau avec menu -->
   <header class="wooden-header">
     <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner" />
     <nav class="nav-links">
       <div class="dropdown">
         <a href="index.html" class="dropbtn">Accueil</a>
       </div>
-
       <div class="dropdown">
-        <button class="dropbtn">Carnets</button>
+        <a href="#" class="dropbtn">Carnets</a>
         <div class="dropdown-content">
           <a href="europe.html">Europe</a>
           <a href="afrique.html">Afrique</a>
@@ -29,33 +37,80 @@
           <a href="tous-les-pays.html">Tous les pays</a>
         </div>
       </div>
-
       <div class="dropdown">
-        <button class="dropbtn">Inspiration</button>
+        <a href="#" class="dropbtn">Inspiration</a>
         <div class="dropdown-content">
           <a href="galerie.html">Galerie</a>
           <a href="articles.html">Articles</a>
           <a href="apropos.html">À propos</a>
         </div>
       </div>
-
       <div class="dropdown">
-        <button class="dropbtn">Pratique</button>
+        <a href="#" class="dropbtn">Pratique</a>
         <div class="dropdown-content">
           <a href="materiel.html">Matériel photo</a>
           <a href="visa.html">Visa & Infos</a>
           <a href="carte.html">Carte interactive</a>
         </div>
       </div>
-    </nav>
+    </nav>    
   </header>
 
+  <!-- Carte -->
   <main class="notebook">
     <h1>🌍 Carte interactive</h1>
-    <p>Voici tous les pays que j'ai eu la chance de visiter. Clique sur un pays pour découvrir mes carnets de voyage !</p>
+    <p>Voici tous les pays que j'ai eu la chance de visiter. Clique dessus pour en découvrir plus !</p>
 
-    <div id="map" style="width: 100%; max-width: 900px; height: 600px; margin: 40px auto;"></div>
+    <div id="map" style="height: 500px; margin-top: 40px;"></div>
   </main>
+
+  <!-- Initialisation de la carte -->
+  <script>
+    $(document).ready(function () {
+      $('#map').vectorMap({
+        map: 'world_mill',
+        backgroundColor: 'transparent',
+        regionStyle: {
+          initial: {
+            fill: '#d2e5d5',
+            "fill-opacity": 1,
+            stroke: "#ffffff",
+            "stroke-width": 1,
+            "stroke-opacity": 0.6
+          },
+          hover: {
+            "fill-opacity": 0.8
+          },
+          selected: {
+            fill: "#f3a683"
+          }
+        },
+        series: {
+          regions: [{
+            values: {
+              BE: '#f5b7b1', // Belgique
+              FR: '#f5b7b1', // France
+              JP: '#f5b7b1', // Japon
+              KR: '#f5b7b1', // Corée du Sud
+              MA: '#f5b7b1', // Maroc
+              ZA: '#f5b7b1', // Afrique du Sud
+              IT: '#f5b7b1', // Italie
+              VN: '#f5b7b1', // Vietnam
+              PT: '#f5b7b1', // Portugal
+              GR: '#f5b7b1', // Grèce
+              // Ajoute tous les pays que tu as visités ici (code ISO)
+            },
+            attribute: 'fill'
+          }]
+        },
+        onRegionClick: function (e, code) {
+          // Tu pourras mettre des redirections ici plus tard si tu veux
+          alert("Tu as cliqué sur : " + code);
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
+
