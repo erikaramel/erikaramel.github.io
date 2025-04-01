@@ -1,93 +1,94 @@
+/* Style Ghibli carnet avec fond et plaque en bois personnalisée */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body {
-    margin: 0;
-    font-family: 'Patrick Hand', cursive;
-    background-color: #f3efe7;
-    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-    background-repeat: repeat;
-    color: #4a3f35;
-  }
-  
-  header {
-    background-color: #fef3e1;
-    text-align: center;
-  }
-  
-  .banner {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-bottom: 4px dashed #d6b97b;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #fce7c0;
-    border-top: 1px dashed #d6b97b;
-    border-bottom: 1px dashed #d6b97b;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #4a3f35;
-    font-size: 1.2em;
-    padding: 10px;
-    display: block;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #c57b57;
-  }
-  
-  main {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #fffef9;
-    border: 3px dashed #d6b97b;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 100% 32px;
-  }
-  
-  .intro {
-    background-color: #fffbe9;
-    border: 2px dashed #d6b97b;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    border-radius: 8px;
-  }
-  
-  .intro h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-  
-  .image-section img {
-    max-width: 100%;
-    border: 3px solid #d6b97b;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  footer {
-    background-color: #fce7c0;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    color: #7c6a58;
-    border-top: 1px dashed #d6b97b;
-    margin-top: 40px;
-    border-radius: 0 0 12px 12px;
-  }
+  margin: 0;
+  font-family: 'Patrick Hand', cursive;
+  background-image: url("images/banniere.png"); /* Fond Ghibli */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #4e3d2b;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("images/banniere.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.97);
+}
+
+.wooden-header {
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+.wood-banner {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-links {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff8e1;
+  font-size: 1.2em;
+  padding: 6px 12px;
+  background-color: rgba(80, 50, 20, 0.6);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(80, 50, 20, 0.8);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.notebook {
+  background-color: rgba(255, 250, 230, 0.95);
+  border: 2px dashed #d1b892;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 850px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-size: 1.2em;
+  line-height: 1.7em;
+  backdrop-filter: blur(2px);
+}
+
+.notebook h1 {
+  margin-top: 0;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
   
