@@ -74,7 +74,20 @@
       <img src="images/banniere.png" alt="Illustration Ghibli Erika" />
     </section>
   </main>
-
+  <script>
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const parent = this.parentElement;
+        const wasActive = parent.classList.contains('active');
+        document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('active'));
+        if (!wasActive) {
+          parent.classList.add('active');
+        }
+        e.preventDefault();
+      });
+    });
+  </script>
+  
 </body>
 </html>
 

@@ -30,9 +30,7 @@ body {
 .wooden-header {
   text-align: center;
   padding-top: 40px;
-  position: sticky;
-  top: 0;
-  background-color: transparent;
+  position: relative;
   z-index: 10;
 }
 
@@ -52,7 +50,7 @@ body {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  z-index: 5;
+  z-index: 15;
 }
 
 .dropdown {
@@ -60,7 +58,6 @@ body {
   display: inline-block;
 }
 
-/* Boutons de navigation */
 .dropbtn {
   background-color: rgba(100, 70, 30, 0.5);
   color: #fff8e1;
@@ -77,40 +74,11 @@ body {
   position: relative;
 }
 
+/* Supprime les chevrons */
 .dropbtn::after {
-  content: ''; /* Supprime les chevrons */
+  content: '';
 }
 
-.dropdown:hover .dropbtn {
-  background-color: rgba(100, 70, 30, 0.8);
-}
-
-/* Lien "Accueil" dans <a> */
-.nav-links a {
-  text-decoration: none;
-}
-
-.nav-links a .dropbtn {
-  all: unset;
-  cursor: pointer;
-  padding: 6px 14px;
-  font-size: 1em;
-  border: 2px solid rgba(80, 50, 20, 0.4);
-  border-radius: 8px;
-  background-color: rgba(100, 70, 30, 0.5);
-  color: #fff8e1;
-  font-family: 'Patrick Hand', cursive;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 #4a3214, -1px -1px 0 #4a3214;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.nav-links a .dropbtn:hover {
-  background-color: rgba(100, 70, 30, 0.8);
-}
-
-/* Sous-menus */
 .dropdown-content {
   opacity: 0;
   visibility: hidden;
@@ -197,7 +165,7 @@ body {
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
-/* Galerie */
+/* ==== Galerie : Grille d’images ==== */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -216,7 +184,7 @@ body {
   transform: scale(1.03);
 }
 
-/* Articles */
+/* ==== Articles ==== */
 .article-list {
   list-style-type: none;
   padding-left: 0;
@@ -240,7 +208,7 @@ body {
   color: #b16c2e;
 }
 
-/* Portrait */
+/* ==== Portrait à propos ==== */
 .portrait img {
   max-width: 220px;
   display: block;
@@ -254,41 +222,39 @@ body {
   transform: scale(1.05);
 }
 
-/* === Amélioration mobile === */
+/* ======== Responsive Mobile Fix ======== */
 @media (max-width: 768px) {
   .nav-links {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: center;
-    gap: 10px;
-    top: 74%;
+    top: 68%;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .dropdown {
-    flex-shrink: 0;
-  }
-
-  .dropbtn {
-    font-size: 0.95em;
-    padding: 6px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    z-index: 15;
   }
 
   .dropdown-content {
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: none;
+    margin-top: 8px;
   }
 
-  body {
-    background-image: url("images/fond-mobile.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  .dropdown.active .dropdown-content {
+    display: block;
   }
 
-  .background {
-    background-image: url("images/fond-mobile.jpg");
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropbtn {
+    font-size: 0.9em;
+    padding: 6px 12px;
   }
 }
-
