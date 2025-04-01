@@ -1,54 +1,91 @@
+/* Feuille de style CSS pour le site d'Erikaramel - thème Ghibli doux */
+
+/* Police et fond général */
 body {
-    font-family: 'Patrick Hand', cursive;
     margin: 0;
-    background-color: #fffaf0;
-    color: #3a2d1a;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #fef8ec;
+    color: #4b2e2e;
+    line-height: 1.6;
   }
   
+  /* En-tête avec image de fond Ghibli */
   header {
-    background-color: #fce4c9;
-    padding: 20px;
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    padding: 80px 20px 60px;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
   }
   
-  nav ul {
-    list-style: none;
-    padding: 0;
+  header h1 {
+    font-size: 3em;
+    margin: 0;
   }
   
-  nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+  nav {
+    margin-top: 20px;
   }
   
-  nav ul li a {
+  nav a {
     text-decoration: none;
-    color: #5a3e1b;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
   }
   
+  nav a:hover {
+    color: #ffe09d;
+  }
+  
+  /* Corps principal */
   main {
-    padding: 30px;
     max-width: 800px;
     margin: auto;
+    padding: 40px 20px;
+    background-color: #fffaf1;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
-  section {
-    margin-bottom: 40px;
+  .intro-box {
+    background-color: #fff4dd;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #d8ba91;
+    margin-bottom: 30px;
+    font-size: 1.2em;
   }
   
-  footer {
-    background-color: #fce4c9;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    color: #5a3e1b;
-  }
-  
-  .banniere {
+  .illustration {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-bottom: 4px dashed #e2c8a0;
-    margin-bottom: 20px;
+    border: 3px solid #e4cfa2;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+  }
+  
+  /* Pied de page */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #f9e1c5;
+    color: #5c4331;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2em;
+    }
+    nav a {
+      font-size: 1em;
+    }
+    .intro-box {
+      font-size: 1em;
+    }
   }
   
