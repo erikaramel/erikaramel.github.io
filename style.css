@@ -75,16 +75,15 @@ body {
   position: relative;
 }
 
-/* Supprime les chevrons ▼ */
 .dropbtn::after {
-  content: '';
+  content: ''; /* Supprime les chevrons */
 }
 
 .dropdown:hover .dropbtn {
   background-color: rgba(100, 70, 30, 0.8);
 }
 
-/* Lien "Accueil" intégré dans un <a> */
+/* Lien "Accueil" dans <a> */
 .nav-links a {
   text-decoration: none;
 }
@@ -162,7 +161,6 @@ body {
   z-index: 1;
 }
 
-/* Suppression du bord supérieur rayé */
 .notebook::before {
   display: none;
 }
@@ -254,13 +252,18 @@ body {
   transform: scale(1.05);
 }
 
-/* === Amélioration de l'affichage mobile === */
+/* === Amélioration mobile === */
 @media (max-width: 768px) {
   .nav-links {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     justify-content: center;
     gap: 10px;
-    top: 100%; /* ajuste si nécessaire selon ton design */
+    top: 100%;
+  }
+
+  .dropdown {
+    flex-shrink: 0;
   }
 
   .dropbtn {
@@ -274,9 +277,13 @@ body {
   }
 
   body {
-    background-image: url("images/fond-mobile.jpg"); /* change si tu as un autre nom */
+    background-image: url("images/fond-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+  }
+
+  .background {
+    background-image: url("images/fond-mobile.jpg");
   }
 }
