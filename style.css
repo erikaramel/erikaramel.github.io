@@ -117,13 +117,16 @@ body {
   padding: 30px;
   border-radius: 20px;
   max-width: 850px;
-  margin: 0 auto;
+  width: calc(100% - 40px); /* évite que le texte touche les bords */
+  margin: 30px auto;
   font-size: 1.2em;
   line-height: 1.7em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
 }
+
 
 .notebook::before {
   display: none;
