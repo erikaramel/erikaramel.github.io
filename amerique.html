@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carnets de voyage – Europe</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amérique – Suggestions de voyage</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="background"></div>
 
+  <!-- Bandeau en bois -->
   <header class="wooden-header">
     <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner" />
     <nav class="nav-links">
       <div class="dropdown">
         <a href="index.html" class="dropbtn">Accueil</a>
       </div>
-    
       <div class="dropdown">
         <a href="#" class="dropbtn">Carnets</a>
         <div class="dropdown-content">
@@ -28,7 +28,6 @@
           <a href="tous-les-pays.html">Tous les pays</a>
         </div>
       </div>
-    
       <div class="dropdown">
         <a href="#" class="dropbtn">Inspiration</a>
         <div class="dropdown-content">
@@ -37,7 +36,6 @@
           <a href="apropos.html">À propos</a>
         </div>
       </div>
-    
       <div class="dropdown">
         <a href="#" class="dropbtn">Pratique</a>
         <div class="dropdown-content">
@@ -46,34 +44,36 @@
           <a href="carte.html">Carte interactive</a>
         </div>
       </div>
-    </nav>    
+    </nav>
   </header>
 
+  <!-- Contenu carnet -->
   <main class="notebook">
-    <h1>📍 Carnets de voyage – Europe</h1>
-    <p>Là où chaque ruelle raconte une histoire, où les montagnes caressent le ciel, et où les couchers de soleil colorent les souvenirs.</p>
+    <h1>🌎 Amérique – En attente d’exploration</h1>
+    <p>
+      Je n’ai pas encore eu la chance de voyager sur ce continent… mais ce rêve grandit chaque jour.  
+      Des montagnes aux plages, des grandes villes aux villages perdus, j’aimerais découvrir l’Amérique avec vos yeux 🧭  
+      Aide-moi à construire mon itinéraire ! ✨
+    </p>
 
-    <h2>🇮🇹 Italie</h2>
-    <p>De la douceur de Venise à la grandeur de Rome, chaque instant est un tableau vivant. <br><em>Bientôt, des récits complets !</em></p>
+    <h2>💌 Tes recommandations pour moi</h2>
+    <p>Tu as voyagé en Amérique ou tu rêves d’y aller ? Dis-moi quels pays, villes ou lieux je devrais visiter :</p>
 
-    <h2>🇫🇷 France</h2>
-    <p>Entre villages perchés, champs de lavande et lumières parisiennes, la poésie est partout.</p>
+    <form action="https://formspree.io/f/mkgjqjqq" method="POST">
+      <label for="email">Ton email (facultatif) :</label><br>
+      <input type="email" id="email" name="email" placeholder="exemple@email.com"><br><br>
 
-    <h2>🇳🇴 Norvège</h2>
-    <p>Les fjords, les aurores boréales, et ce silence magique qui apaise tout.</p>
+      <label for="message">Tes recommandations :</label><br>
+      <textarea id="message" name="message" rows="6" placeholder="Dis-moi tout !" required></textarea><br><br>
 
-    <h2>🌍 Et bien d’autres…</h2>
-    <ul>
-      <li>Islande</li>
-      <li>Albanie</li>
-      <li>Grèce</li>
-      <li>Portugal</li>
-      <li>Autriche</li>
-      <li>Irlande</li>
-    </ul>
-
-    <p style="margin-top: 30px;">Chaque pays aura bientôt sa propre page dédiée, avec photos, anecdotes, conseils et itinéraires ✈️📸</p>
+      <button type="submit">Envoyer ✈️</button>
+    </form>
   </main>
+
+  <footer class="site-footer">
+    Merci pour ta précieuse aide 💛  
+    Peut-être que ta suggestion sera le point de départ de ma future aventure !
+  </footer>
 
 </body>
 </html>
