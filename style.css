@@ -239,12 +239,12 @@ body {
   
   /* On force les boutons à rester en ligne en réduisant leur taille */
   .dropbtn {
-    padding: 4px 8px;
-    font-size: 0.8em;
-    max-width: 80px;
+    padding: 3px 6px;
+    font-size: 0.7em;
+    max-width: 68px;
     text-align: center;
     white-space: nowrap;
-  }
+  }  
   
   .dropdown-content {
     position: absolute;
