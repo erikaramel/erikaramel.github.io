@@ -127,7 +127,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .notebook::before {
   display: none;
 }
@@ -232,19 +231,21 @@ body {
 @media (max-width: 768px) {
   .nav-links {
     flex-wrap: nowrap;
-    flex-direction: row;
     justify-content: center;
-    flex-flow: row wrap;
-    gap: 10px;
+    gap: 6px;
     width: 100%;
     top: 78%;
   }
-
+  
+  /* On force les boutons à rester en ligne en réduisant leur taille */
   .dropbtn {
-    padding: 6px 12px;
-    font-size: 0.95em;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    max-width: 80px;
+    text-align: center;
+    white-space: nowrap;
   }
-
+  
   .dropdown-content {
     position: absolute;
     top: 100%;
@@ -253,28 +254,28 @@ body {
     min-width: 130px;
     padding: 4px 0;
   }
-
+  
   .dropdown-content a {
     font-size: 0.9em;
     padding: 6px 10px;
     text-align: center;
     white-space: nowrap;
   }
-
+  
   /* 🎨 Fond d’écran spécial version mobile + marges */
   body {
     background-image: url("images/fond-mobile.jpg");
   }
-
+  
   .background {
     background-image: url("images/fond-mobile.jpg");
   }
-
+  
   .notebook {
     padding-left: 20px;
     padding-right: 20px;
   }
-
+  
   h1, p {
     text-align: left;
   }
@@ -298,3 +299,4 @@ body {
   font-family: 'Patrick Hand', cursive;
   opacity: 0.7;
 }
+
