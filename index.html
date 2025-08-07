@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>erikaramel</title>
+
+  <!-- Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     * {
       margin: 0;
@@ -14,7 +18,7 @@
     }
 
     body {
-      background: url('https://i.imgur.com/3zK7WMr.png'); /* fond nuages ghibli-like */
+      background: url('images/nuages.jpg');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -38,14 +42,19 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
       margin-bottom: 1.5rem;
+      font-size: 1.8rem;
     }
 
     .social-icons a {
-      font-size: 1.5rem;
-      text-decoration: none;
       color: #5c3b28;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
     }
 
     .hero-img {
@@ -81,27 +90,37 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Icônes réseaux -->
   <div class="social-icons">
-    <a href="https://www.instagram.com/erikaramell" target="_blank">📷</a>
-    <a href="https://www.tiktok.com/@erikaramell" target="_blank">🎵</a>
-    <a href="mailto:contact@erikaramel.com">📧</a>
-    <a href="/blog/index.html">✨</a>
+    <a href="https://www.instagram.com/erikaramell" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="mailto:contact@erikaramel.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="/blog/index.html" title="Mon blog"><i class="fas fa-book"></i></a>
   </div>
 
+  <!-- Titre et sous-titre -->
   <h1>erikaramel</h1>
   <p class="subtitle">Travel lover sharing dreamy places & useful tools for fellow explorers</p>
 
+  <!-- Photo principale -->
   <img src="blog/images/egypte.jpg" alt="Photo Erika sur chameau" class="hero-img" />
 
+  <!-- Liens principaux -->
   <div class="links">
-    <a href="https://www.saily.com/" target="_blank">MY TOP TRAVEL TOOLS</a>
-    <a href="https://www.canon.fr/" target="_blank">MY FAVORITE CAMERA</a>
-    <a href="https://www.booking.com/" target="_blank">TO FIND CHEAP HOTEL</a>
+    <a href="https://www.saily.com/" target="_blank">📱 MY TOP TRAVEL TOOLS</a>
+    <a href="https://www.canon.fr/" target="_blank">📷 MY FAVORITE CAMERA</a>
+    <a href="https://www.booking.com/" target="_blank">🏨 TO FIND CHEAP HOTEL</a>
   </div>
 
+  <!-- Présentation -->
   <footer>
-    <p>Hi, I’m Erika, a travel and photography enthusiast. I’ve already visited 48 countries — and I’m taking you with me for the next ones.</p>
+    <p>Hi, I’m Erika, a travel and photography enthusiast.<br>
+    I’ve already visited 48 countries — and I’m taking you with me for the next ones 🌍</p>
   </footer>
+
 </body>
 </html>
+
