@@ -9,7 +9,7 @@
 /* Fond nuages – commun à toutes les pages */
 .bg-nuages {
   background: url('images/nuages-pc.png') repeat;
-  background-size: 500px;
+  background-size: 1000px;
   background-attachment: fixed;
   background-position: center top;
 }
@@ -18,7 +18,7 @@
 @media (max-width: 768px) {
   .bg-nuages {
     background: url('images/nuages-mobile.png') repeat;
-    background-size: 500px;
+    background-size: 800px;
     background-attachment: local;
     background-position: top center;
   }
