@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'NoyhA';
+  src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'NoyhA', "Segoe UI", sans-serif;
   background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-fond.png') repeat;
   background-size: 500px;
   color: #3e2c23;
