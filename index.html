@@ -2,26 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>erikaramel</title>
-
-  <!-- Fonts + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
-
     body {
-      background: url('images/nuages.png');
-      background-size: cover;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: url('images/nuages.jpg') center/cover no-repeat;
       background-attachment: fixed;
-      background-position: center;
       text-align: center;
       padding: 2rem;
       color: #5c3b28;
@@ -31,55 +21,79 @@
       font-family: 'Cherry Swash', cursive;
       font-size: 3rem;
       color: #703d2c;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
-    p.subtitle {
+    .subtitle {
       font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-container {
+      position: relative;
+      display: inline-block;
       margin-bottom: 1.5rem;
     }
 
     .hero-img {
       max-width: 100%;
-      width: 300px;
+      width: 320px;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      color: white;
+      font-size: 1.2rem;
+      font-family: 'Cherry Swash', cursive;
+      text-shadow: 1px 1px 3px #00000088;
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
+      gap: 1rem;
+      margin: 1rem 0 2rem 0;
     }
 
     .social-icons a {
-      color: #5c3b28;
+      background: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #703d2c;
+      font-size: 1.2rem;
       text-decoration: none;
-      transition: transform 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
     }
 
     .social-icons a:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
 
     .links a {
       display: block;
-      background-color: #8b5e3c;
+      background-color: #703d2c;
       color: white;
       text-decoration: none;
       padding: 1rem;
-      margin: 0.5rem auto;
+      margin: 0.6rem auto;
       border-radius: 30px;
-      max-width: 300px;
+      max-width: 320px;
       font-weight: bold;
+      font-size: 1rem;
       transition: background-color 0.3s;
     }
 
     .links a:hover {
-      background-color: #a56a4a;
+      background-color: #8b5e3c;
     }
 
     footer {
@@ -87,35 +101,33 @@
       font-size: 0.95rem;
       line-height: 1.5;
       padding: 0 1rem;
+      color: #5c3b28;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Titre et sous-titre -->
   <h1>erikaramel</h1>
   <p class="subtitle">Travel lover sharing dreamy places & useful tools for fellow explorers</p>
 
-  <!-- Photo principale -->
-  <img src="images/egypte.jpg" alt="Photo Erika sur chameau" class="hero-img" />
+  <div class="hero-container">
+    <img src="blog/images/egypte.jpg" alt="Photo Erika sur chameau" class="hero-img" />
+    <div class="hero-text">See where I’ve been</div>
+  </div>
 
-  <!-- Icônes réseaux -->
   <div class="social-icons">
-    <a href="https://www.instagram.com/erikaramell" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@erikaramell" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:contact@erikaramel.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="/blog/" title="My blog"><i class="fas fa-pen-to-square"></i></a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/erikaramell" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:contact@erikaramel.com"><i class="fas fa-envelope"></i></a>
+    <a href="/blog"><i class="fas fa-pen-to-square"></i></a>
   </div>
 
-  <!-- Liens principaux -->
   <div class="links">
-    <a href="https://www.saily.com/" target="_blank">📱 MY TOP TRAVEL TOOLS</a>
-    <a href="https://www.canon.fr/" target="_blank">📷 MY FAVORITE CAMERA</a>
-    <a href="https://www.booking.com/" target="_blank">🏨 TO FIND CHEAP HOTEL</a>
+    <a href="https://www.saily.com/" target="_blank">MY TOP TRAVEL TOOLS</a>
+    <a href="https://www.canon.fr/" target="_blank">MY FAVORITE CAMERA</a>
+    <a href="https://www.booking.com/" target="_blank">TO FIND CHEAP HOTEL</a>
   </div>
 
-  <!-- Présentation -->
   <footer>
     <p>Hi, I’m Erika, a travel and photography enthusiast.<br>
     I’ve already visited 48 countries — and I’m taking you with me for the next ones 🌍</p>
