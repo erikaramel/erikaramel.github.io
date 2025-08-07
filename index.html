@@ -1,98 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voyage poétique d’Erika</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>erikaramel</title>
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-
-  <!-- Fond Ghibli en arrière-plan -->
-  <div class="background"></div>
-
-  <!-- En-tête en bois avec navigation -->
-  <header class="wooden-header">
-    <img src="images/banniere-bois.png" alt="Bannière bois" class="wood-banner" />
-    <nav class="nav-links">
-      <div class="dropdown">
-        <a href="index.html" class="dropbtn">Accueil</a>
-      </div>
-    
-      <div class="dropdown">
-        <a href="#" class="dropbtn">Carnets</a>
-        <div class="dropdown-content">
-          <a href="europe.html">Europe</a>
-          <a href="afrique.html">Afrique</a>
-          <a href="asie.html">Asie</a>
-          <a href="amerique.html">Amérique</a>
-          <a href="tous-les-pays.html">Tous les pays</a>
-        </div>
-      </div>
-    
-      <div class="dropdown">
-        <a href="#" class="dropbtn">Inspiration</a>
-        <div class="dropdown-content">
-          <a href="galerie.html">Galerie</a>
-          <a href="articles.html">Articles</a>
-          <a href="apropos.html">À propos</a>
-        </div>
-      </div>
-    
-      <div class="dropdown">
-        <a href="#" class="dropbtn">Pratique</a>
-        <div class="dropdown-content">
-          <a href="materiel.html">Matériel photo</a>
-          <a href="visa.html">Visa & Infos</a>
-          <a href="carte.html">Carte interactive</a>
-        </div>
-      </div>
-    </nav>    
+  <header>
+    <h1>erikaramel</h1>
+    <p>Travel lover sharing dreamy places & useful tools ✈️</p>
+    <img src="blog/images/egypte.jpg" alt="Photo Erika sur chameau" class="hero" />
   </header>
 
-  <!-- Contenu effet cahier -->
-  <main class="notebook">
-    <section class="intro">
-      <h1>Bienvenue dans mon univers poétique ✨</h1>
-      <p>
-        Ce carnet est bien plus qu’un blog de voyage.<br>
-        C’est une collection de souvenirs, d’émotions, et d’images capturées au fil de mes pas.
-      </p>
-      <p>
-        Inspirée par les œuvres du Studio Ghibli, je t’emmène avec moi à travers les forêts enchantées du Japon, 
-        les villages colorés d’Europe, les déserts dorés d’Afrique et les vallées perdues d’Asie.
-      </p>
-      <p>
-        Chaque lieu que je visite est une page de rêve que je dessine avec mon cœur, mon appareil photo et un brin de nostalgie.
-      </p>
-      <p>
-        Prends ton sac à dos imaginaire, et laisse-toi porter 🌍✈️
-      </p>
-    </section>
+  <div class="links">
+    <a href="https://www.airalo.com/" target="_blank">📱 Best eSIM for Travel</a>
+    <a href="https://www.canon.fr/" target="_blank">📷 My Favorite Camera</a>
+    <a href="https://www.booking.com/" target="_blank">🏨 To Find Cheap Hotel</a>
+  </div>
 
-    <section class="image">
-      <img src="images/banniere.png" alt="Illustration Erikaramell" />
-    </section>
-  </main>
+  <div class="socials">
+    <a href="https://www.instagram.com/erikaramell" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank">TikTok</a>
+    <a href="mailto:contact@erikaramel.com">Email</a>
+    <a href="/blog/index.html">Mon blog ✨</a>
+  </div>
 
-  <script>
-    document.querySelectorAll('.dropbtn').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        const parent = this.parentElement;
-        const wasActive = parent.classList.contains('active');
-        document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('active'));
-        if (!wasActive) {
-          parent.classList.add('active');
-        }
-        e.preventDefault();
-      });
-    });
-  </script>
-
-<footer class="site-footer">
-  © 2025 Erikaramell – Tous droits réservés 🌸
-</footer>
-
+  <footer>
+    <p>Moi c’est Erika, passionnée de voyages, de photo, et de skincare.<br>
+    J’ai déjà visité 48 pays — et je t’emmène avec moi pour les prochains 🌍</p>
+  </footer>
 </body>
 </html>
