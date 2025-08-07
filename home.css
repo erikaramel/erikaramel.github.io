@@ -1,4 +1,6 @@
-/* Police personnalisée */
+/* ================================
+   Police personnalisée
+=================================== */
 @font-face {
   font-family: 'NoyhA';
   src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
@@ -6,25 +8,41 @@
   font-style: normal;
 }
 
-/* Fond nuages – commun à toutes les pages */
+/* ================================
+   Fond nuages – commun
+   (utiliser <body class="bg-nuages">)
+=================================== */
 .bg-nuages {
-  background: url('images/nuages-pc.png') repeat;
-  background-size: 1000px;
-  background-attachment: fixed;
+  background-image: url('/images/nuages-pc.png'); /* chemin absolu */
+  background-repeat: repeat;
   background-position: center top;
+  background-attachment: fixed;
+  /* nuages + gros pour éviter l'effet "tapis" */
+  background-size: 1400px;
 }
 
-/* Version mobile – fond plus stable */
+/* Ajuste la taille des nuages selon la largeur d’écran (desktop) */
+@media (min-width: 1600px) {
+  .bg-nuages { background-size: 1700px; }
+}
+@media (max-width: 1200px) {
+  .bg-nuages { background-size: 1100px; }
+}
+
+/* Mobile – fond stable, pas de zoom/glitch */
 @media (max-width: 768px) {
   .bg-nuages {
-    background: url('images/nuages-mobile.png') repeat;
-    background-size: 800px;
-    background-attachment: local;
+    background-image: url('/images/nuages-mobile.png');
+    background-repeat: repeat;
     background-position: top center;
+    background-attachment: local;   /* évite les bugs de scroll */
+    background-size: 900px;         /* nuages lisibles sur mobile */
   }
 }
 
-/* Style général */
+/* ================================
+   Style général
+=================================== */
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
@@ -33,9 +51,7 @@ body {
 }
 
 /* Header */
-header {
-  padding: 2rem 1rem;
-}
+header { padding: 2rem 1rem; }
 
 /* Titres */
 h1 {
@@ -45,9 +61,7 @@ h1 {
 }
 
 /* Paragraphes */
-p {
-  font-size: 1.2rem;
-}
+p { font-size: 1.2rem; }
 
 /* Image principale */
 .hero {
@@ -76,9 +90,7 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.links a:hover {
-  background: #5f3a29;
-}
+.links a:hover { background: #5f3a29; }
 
 /* Icônes sociales */
 .socials {
@@ -95,26 +107,13 @@ footer {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* Version bureau – polices plus grandes */
+/* ================================
+   Version bureau – textes plus grands
+=================================== */
 @media (min-width: 769px) {
-  body {
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 1.4rem;
-  }
-
-  .links a {
-    font-size: 1.1rem;
-    padding: 1.2rem;
-  }
-
-  footer {
-    font-size: 1.1rem;
-  }
+  body { font-size: 1.2rem; }
+  h1 { font-size: 4rem; }
+  p  { font-size: 1.4rem; }
+  .links a { font-size: 1.1rem; padding: 1.2rem; }
+  footer { font-size: 1.1rem; }
 }
