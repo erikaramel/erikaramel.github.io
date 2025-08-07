@@ -24,10 +24,13 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        background: url('images/nuages-mobile.png') center/cover no-repeat fixed;
-      }
-    }
+  body {
+    background: url('images/nuages-mobile.png') center repeat;
+    background-size: cover;
+    background-attachment: scroll; /* évite le zoom sur mobile */
+  }
+}
+
 
     h1 {
       font-size: 3rem;
