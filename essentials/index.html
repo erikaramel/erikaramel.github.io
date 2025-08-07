@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Essentials</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
@@ -24,50 +24,51 @@
       margin-bottom: 0.5rem;
     }
 
-    .subtitle {
-      font-size: 1rem;
+    p.subtitle {
+      font-size: 1.1rem;
       margin-bottom: 2rem;
+      padding: 0 1rem;
       max-width: 600px;
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .box {
+    .links a {
+      display: block;
       background-color: #703d2c;
       color: white;
       text-decoration: none;
       padding: 1rem;
-      margin: 0.6rem auto 0.3rem;
+      margin: 0.6rem auto;
       border-radius: 30px;
-      max-width: 340px;
-      display: block;
+      max-width: 400px;
       font-weight: bold;
       font-size: 1rem;
       transition: background-color 0.3s;
     }
 
-    .box:hover {
+    .links a small {
+      display: block;
+      font-weight: normal;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .links a:hover {
       background-color: #8b5e3c;
     }
 
-    .code {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      color: #5c3b28;
-    }
-
-    a.box i {
-      margin-right: 8px;
-    }
-
-    .back {
+    footer {
       margin-top: 2rem;
-      font-size: 0.95rem;
-      display: inline-block;
-      color: #5c3b28;
-      text-decoration: none;
     }
 
-    .back:hover {
+    footer a {
+      text-decoration: none;
+      color: #5c3b28;
+      font-size: 0.95rem;
+    }
+
+    footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -75,20 +76,36 @@
 <body>
 
   <h1>✈️ Travel Essentials</h1>
-  <p class="subtitle">These are my must-haves to travel smarter, lighter, and stay connected on the road. I bring them everywhere — hope they’ll help you too!</p>
+  <p class="subtitle">
+    These are my must-haves to travel smarter, lighter, and stay connected on the road.  
+    I bring them everywhere — hope they’ll help you too!
+  </p>
 
-  <a class="box" href="https://go.saily.site/aff_c?offer_id=101&aff_id=10214" target="_blank">
-    <i class="fa-solid fa-sim-card"></i> Best eSIM for travelers
-  </a>
-  <p class="code">💸 Get $5 off your first eSIM with the code <strong>ERIKAT4942</strong></p>
+  <div class="links">
 
-  <a class="box" href="#"><i class="fa-solid fa-plug"></i> Universal travel adapter</a>
-  <a class="box" href="#"><i class="fa-regular fa-credit-card"></i> No-fee travel cards</a>
-  <a class="box" href="#"><i class="fa-solid fa-mobile-screen-button"></i> Must-have travel apps</a>
-  <a class="box" href="#"><i class="fa-solid fa-train-subway"></i> Plane & train essentials</a>
-  <a class="box" href="#"><i class="fa-solid fa-suitcase-rolling"></i> My favorite travel bag</a>
+    <!-- eSIM -->
+    <a href="https://go.saily.site/aff_c?offer_id=101&aff_id=10214" target="_blank">
+      📱 Best eSIM for travelers  
+      <small>-$5 with code ERIKAT4942 on your first eSIM</small>
+    </a>
 
-  <a class="back" href="/"><i class="fa-solid fa-arrow-left"></i> Back to homepage</a>
+    <!-- Revolut -->
+    <a href="https://revolut.com/referral/?referral-code=erika4deu!AUG1-25-AR&geo-redirect" target="_blank">
+      💳 No-fee travel card  
+      <small>Up to €1000/month free</small>
+    </a>
+
+    <!-- Wise -->
+    <a href="https://wise.com/invite/ahpc/erikad657" target="_blank">
+      💳 Low-fee travel card  
+      <small>2 free ATM withdrawals per month</small>
+    </a>
+
+  </div>
+
+  <footer>
+    <a href="../index.html">← Back to homepage</a>
+  </footer>
 
 </body>
 </html>
