@@ -1,60 +1,48 @@
-/* ===== Font ===== */
 @font-face {
   font-family: 'NoyhA';
   src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
-/* ===== Base ===== */
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
+  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-fond.png') repeat;
+  background-size: 500px; /* taille par défaut */
   color: #3e2c23;
   text-align: center;
-
-  /* Mobile: fond par défaut */
-  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-mobile.png') repeat;
-  background-size: 500px;
-  background-attachment: fixed; /* effet papier peint, pas de zoom */
 }
 
-/* Desktop / tablettes larges */
-@media (min-width: 768px) {
+/* Sur mobile : fond moins zoomé */
+@media (max-width: 768px) {
   body {
-    background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-pc.png') repeat;
-    background-size: 500px;
-    background-attachment: fixed;
-
-    /* Texte plus grand sur PC */
-    font-size: 1.2rem;
+    background-size: 300px;
   }
-
-  h1 { font-size: 4rem; }
-  p  { font-size: 1.4rem; }
 }
 
-/* ===== Layout ===== */
-header { padding: 2rem 1rem; }
+header {
+  padding: 2rem 1rem;
+}
 
 h1 {
-  font-size: 3rem;         /* mobile */
+  font-size: 3rem;
   color: #7a4e35;
   margin: 0;
 }
 
-p { font-size: 1.2rem; }   /* mobile */
+p {
+  font-size: 1.2rem;
+}
 
 .hero {
   width: 90%;
   max-width: 500px;
   margin-top: 1.5rem;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
 
-/* ===== Links / Buttons ===== */
+/* Liens principaux */
 .links {
   margin: 3rem auto;
   display: flex;
@@ -65,33 +53,50 @@ p { font-size: 1.2rem; }   /* mobile */
 
 .links a {
   background: #7a4e35;
-  color: #fff;
+  color: white;
   padding: 1rem;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  transition: background-color .2s ease, transform .1s ease;
 }
 
-.links a:hover { background: #5f3a29; }
-.links a:active { transform: translateY(1px); }
+.links a:hover {
+  background: #5f3a29;
+}
 
-/* ===== Socials ===== */
+/* Icônes réseaux */
 .socials {
-  margin: 2rem;
+  margin: 2rem auto;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-/* ===== Footer ===== */
+.socials a {
+  color: #7a4e35;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+  color: #5f3a29;
+}
+
 footer {
   margin-top: 2rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  display: inline-block;
 }
 
-/* Option: améliorer le rendu sur iOS Safari */
-html { -webkit-text-size-adjust: 100%; }
+/* Taille du texte plus grande sur PC */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
