@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>erikaramel</title>
+  <title>Travel Essentials – erikaramel</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
     @font-face {
       font-family: 'NoyhA';
-      src: url('fonts/NoyhA-Regular.ttf') format('truetype');
+      src: url('../fonts/NoyhA-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
+    /* === mêmes styles que la home === */
     body {
       margin: 0;
       font-family: 'NoyhA', sans-serif;
-      background: url('images/nuages-pc.png') center/cover no-repeat fixed;
+      background: url('../images/nuages-pc.png') center/cover no-repeat fixed;
       text-align: center;
       padding: 2rem;
       color: #5c3b28;
@@ -25,7 +27,7 @@
 
     @media (max-width: 768px) {
       body {
-        background: url('images/nuages-mobile.png') center/cover no-repeat fixed;
+        background: url('../images/nuages-mobile.png') center/cover no-repeat fixed;
       }
     }
 
@@ -33,37 +35,15 @@
       font-size: 3rem;
       color: #703d2c;
       margin-bottom: 0.3rem;
+      text-transform: lowercase; /* pour matcher "erikaramel" vibe */
     }
 
     .subtitle {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-    }
-
-    .hero-img {
-      max-width: 100%;
-      width: 320px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin-bottom: 1.5rem;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      font-size: 1.5rem;
-    }
-
-    .social-icons a {
-      color: #703d2c;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .links a {
@@ -74,14 +54,19 @@
       padding: 1rem;
       margin: 0.6rem auto;
       border-radius: 30px;
-      max-width: 320px;
+      max-width: 420px;
       font-weight: bold;
       font-size: 1rem;
       transition: background-color 0.3s;
     }
+    .links a:hover { background-color: #8b5e3c; }
 
-    .links a:hover {
-      background-color: #8b5e3c;
+    .links a small {
+      display: block;
+      font-weight: normal;
+      font-size: 0.9rem;
+      margin-top: 6px;
+      opacity: 0.95;
     }
 
     footer {
@@ -91,50 +76,41 @@
       padding: 0 1rem;
       color: #5c3b28;
     }
+    footer a {
+      color: #5c3b28;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
   </style>
-<body>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Travel Essentials</title>
-  
-  <!-- Icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Police Google pour backup -->
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
-
-  <!-- CSS externe -->
-  <link rel="stylesheet" href="essentials.css">
 </head>
 
 <body>
   <h1>travel essentials</h1>
 
   <p class="subtitle">
-    These are my must-haves to travel smarter, lighter, and stay connected on the road.  
+    These are my must-haves to travel smarter, lighter, and stay connected on the road.
     I bring them everywhere — hope they’ll help you too!
   </p>
 
   <div class="links">
-    <a href="https://go.saily.site/aff_c?offer_id=101&aff_id=10214" target="_blank">
-      📱 Best eSIM for travelers  
-      <small>-$5 with code ERIKAT4942 on your first eSIM</small>
+    <a href="https://go.saily.site/aff_c?offer_id=101&aff_id=10214" target="_blank" rel="noopener">
+      📱 Best eSIM for travelers
+      <small>–$5 with code <strong>ERIKAT4942</strong> on your first eSIM</small>
     </a>
 
-    <a href="https://revolut.com/referral/?referral-code=erika4deu!AUG1-25-AR&geo-redirect" target="_blank">
-      💳 No-fee travel card  
+    <a href="https://revolut.com/referral/?referral-code=erika4deu!AUG1-25-AR&geo-redirect" target="_blank" rel="noopener">
+      💳 No-fee travel card
       <small>Up to €1000/month free</small>
     </a>
 
-    <a href="https://wise.com/invite/ahpc/erikad657" target="_blank">
-      💳 Low-fee travel card  
+    <a href="https://wise.com/invite/ahpc/erikad657" target="_blank" rel="noopener">
+      💳 Low-fee travel card
       <small>2 free ATM withdrawals per month</small>
     </a>
   </div>
 
   <footer>
-    <a href="../index.html">← Back to homepage</a>
+    <a href="/">← Back to homepage</a>
   </footer>
 </body>
 </html>
