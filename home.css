@@ -1,73 +1,60 @@
-/* ===================== */
-/* Police personnalisée  */
-/* ===================== */
+/* ===== Font ===== */
 @font-face {
   font-family: 'NoyhA';
   src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-/* ===================== */
-/* Fond nuages           */
-/* ===================== */
-.bg-nuages {
-  background: url('images/nuages-pc.png') repeat;
-  background-size: 500px;
-  background-attachment: fixed;
-  background-position: center top;
-}
-
-/* Mobile – fond plus stable */
-@media (max-width: 768px) {
-  .bg-nuages {
-    background: url('images/nuages-mobile.png') repeat;
-    background-size: 500px;
-    background-attachment: local;
-    background-position: top center;
-  }
-}
-
-/* ===================== */
-/* Style général         */
-/* ===================== */
+/* ===== Base ===== */
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
   color: #3e2c23;
   text-align: center;
+
+  /* Mobile: fond par défaut */
+  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-mobile.png') repeat;
+  background-size: 500px;
+  background-attachment: fixed; /* effet papier peint, pas de zoom */
 }
 
-/* ===================== */
-/* Header                */
-/* ===================== */
-header {
-  padding: 2rem 1rem;
+/* Desktop / tablettes larges */
+@media (min-width: 768px) {
+  body {
+    background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-pc.png') repeat;
+    background-size: 500px;
+    background-attachment: fixed;
+
+    /* Texte plus grand sur PC */
+    font-size: 1.2rem;
+  }
+
+  h1 { font-size: 4rem; }
+  p  { font-size: 1.4rem; }
 }
 
-/* Titres */
+/* ===== Layout ===== */
+header { padding: 2rem 1rem; }
+
 h1 {
-  font-size: 3rem;
+  font-size: 3rem;         /* mobile */
   color: #7a4e35;
   margin: 0;
 }
 
-/* Paragraphes */
-p {
-  font-size: 1.2rem;
-}
+p { font-size: 1.2rem; }   /* mobile */
 
-/* Image principale */
 .hero {
   width: 90%;
   max-width: 500px;
   margin-top: 1.5rem;
   border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
 
-/* ===================== */
-/* Liens boutons         */
-/* ===================== */
+/* ===== Links / Buttons ===== */
 .links {
   margin: 3rem auto;
   display: flex;
@@ -78,93 +65,33 @@ p {
 
 .links a {
   background: #7a4e35;
-  color: white;
+  color: #fff;
   padding: 1rem;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color .2s ease, transform .1s ease;
 }
 
-.links a:hover {
-  background: #5f3a29;
-}
+.links a:hover { background: #5f3a29; }
+.links a:active { transform: translateY(1px); }
 
-/* ===================== */
-/* Icônes sociales       */
-/* ===================== */
+/* ===== Socials ===== */
 .socials {
-  margin: 1.5rem 0 2rem 0;
+  margin: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.socials a {
-  background: #ffffff;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #703d2c;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-
-.socials a i {
-  font-size: 20px;
-  line-height: 1;
-}
-
-.socials a:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
-}
-
-/* ===================== */
-/* Footer                */
-/* ===================== */
+/* ===== Footer ===== */
 footer {
   margin-top: 2rem;
-  background: transparent;
-  padding: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  display: inline-block;
 }
 
-footer p {
-  max-width: 780px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
-  font-size: 1.05rem;
-  color: #5c3b28;
-  text-wrap: balance;
-}
-
-/* ===================== */
-/* Version bureau        */
-/* ===================== */
-@media (min-width: 769px) {
-  body {
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 1.4rem;
-  }
-
-  .links a {
-    font-size: 1.1rem;
-    padding: 1.2rem;
-  }
-
-  footer p {
-    font-size: 1.2rem;
-  }
-}
+/* Option: améliorer le rendu sur iOS Safari */
+html { -webkit-text-size-adjust: 100%; }
