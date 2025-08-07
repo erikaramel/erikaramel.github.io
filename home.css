@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'NoyhA';
-  src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
+  src: url('fonts/NoyhA-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -8,17 +8,16 @@
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
-  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-pc.png') repeat;
-  background-attachment: fixed;
+  background: url('images/nuages-pc.png') repeat;
   background-size: 500px;
+  background-attachment: fixed;
   color: #3e2c23;
   text-align: center;
 }
 
-/* Fond mobile différent */
 @media (max-width: 768px) {
   body {
-    background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-mobile.png') repeat;
+    background: url('images/nuages-mobile.png') repeat;
     background-size: 300px;
     background-attachment: fixed;
   }
@@ -69,19 +68,8 @@ p {
 .socials {
   margin: 2rem;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 2rem;
-}
-
-.socials a {
-  color: #7a4e35;
-  transition: transform 0.2s ease;
-}
-
-.socials a:hover {
-  transform: scale(1.2);
-  color: #5f3a29;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 footer {
