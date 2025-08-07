@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,11 +10,11 @@
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Footer font -->
+  <!-- Footer font (discrete) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Noyh A (your main font) */
+    /* Noyh A (main font) */
     @font-face {
       font-family: 'NoyhA';
       src: url('fonts/NoyhA-Regular.ttf') format('truetype');
@@ -43,7 +43,7 @@
       body {
         background: url('images/nuages-mobile.png') center repeat;
         background-size: cover;
-        background-attachment: scroll; /* prevents zoomy scroll on some phones */
+        background-attachment: scroll; /* évite l'effet de zoom au scroll */
       }
     }
 
@@ -90,7 +90,7 @@
       color: white;
       text-decoration: none;
       padding: 1rem;
-      margin: 0.6rem auto;
+      margin: 0.6rem auto 1.2rem;
       border-radius: 30px;
       max-width: 320px;
       font-weight: bold;
@@ -102,24 +102,27 @@
       background-color: var(--brown-3);
     }
 
-    /* Footer small & subtle with Poppins */
+    /* --- Intro section (moved out of footer) --- */
+    .intro {
+      font-family: 'NoyhA', sans-serif; /* on force ta police ici */
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto 0.25rem;
+      padding: 0 1rem;
+    }
+
+    /* Footer minimal & discrete */
     footer {
-      margin-top: 2rem;
-      line-height: 1.5;
-      padding: 0 1rem 1.25rem;
-      color: var(--brown-2);
+      margin-top: 1.25rem;
+      padding-bottom: 1rem;
       font-family: 'Poppins', sans-serif;
     }
-
-    footer .about {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-
-    footer .legal {
-      font-size: 0.85rem;
-      opacity: 0.6;
+    .small-footer {
+      font-size: 0.8rem;
+      opacity: 0.65;
       margin: 0.15rem 0;
+      color: var(--brown-2);
     }
   </style>
 </head>
@@ -140,15 +143,16 @@
     <a href="/essentials">MY TOP TRAVEL TOOLS</a>
   </div>
 
-  <footer>
-    <p class="about">
-      Hi, I’m Erika, a travel and photography enthusiast.<br>
-      I’ve already visited 49 countries and I’m taking you with me for the next ones 🌍
-    </p>
+  <!-- Intro moved here -->
+  <p class="intro">
+    Hi, I’m Erika, a travel and photography enthusiast.<br>
+    I’ve already visited 49 countries and I’m taking you with me for the next ones 🌍
+  </p>
 
-    <p class="legal">© 2025 erikaramel — All rights reserved</p>
+  <footer>
+    <p class="small-footer">© 2025 erikaramel — All rights reserved</p>
+    <p class="small-footer">Hand-coded with ☁️ & ☕</p>
   </footer>
 
 </body>
 </html>
-
