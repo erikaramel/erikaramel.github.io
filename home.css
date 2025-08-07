@@ -1,3 +1,4 @@
+/* Police personnalisée */
 @font-face {
   font-family: 'NoyhA';
   src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
@@ -5,41 +6,50 @@
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  font-family: 'NoyhA', "Segoe UI", sans-serif;
+/* Fond nuages – commun à toutes les pages */
+.bg-nuages {
   background: url('images/nuages-pc.png') repeat;
   background-size: 500px;
   background-attachment: fixed;
   background-position: center top;
-  color: #3e2c23;
-  text-align: center;
 }
 
-/* ✅ Version mobile (fond plus stable, pas de zoom ni scroll weird) */
+/* Version mobile – fond plus stable */
 @media (max-width: 768px) {
-  body {
+  .bg-nuages {
     background: url('images/nuages-mobile.png') repeat;
     background-size: 500px;
-    background-attachment: local;  /* évite le zoom */
+    background-attachment: local;
     background-position: top center;
   }
 }
 
+/* Style général */
+body {
+  margin: 0;
+  font-family: 'NoyhA', "Segoe UI", sans-serif;
+  color: #3e2c23;
+  text-align: center;
+}
+
+/* Header */
 header {
   padding: 2rem 1rem;
 }
 
+/* Titres */
 h1 {
   font-size: 3rem;
   color: #7a4e35;
   margin: 0;
 }
 
+/* Paragraphes */
 p {
   font-size: 1.2rem;
 }
 
+/* Image principale */
 .hero {
   width: 90%;
   max-width: 500px;
@@ -47,6 +57,7 @@ p {
   border-radius: 20px;
 }
 
+/* Liens boutons */
 .links {
   margin: 3rem auto;
   display: flex;
@@ -62,12 +73,14 @@ p {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .links a:hover {
   background: #5f3a29;
 }
 
+/* Icônes sociales */
 .socials {
   margin: 2rem;
   display: flex;
@@ -75,12 +88,14 @@ p {
   gap: 0.5rem;
 }
 
+/* Footer */
 footer {
   margin-top: 2rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.8);
 }
 
+/* Version bureau – polices plus grandes */
 @media (min-width: 769px) {
   body {
     font-size: 1.2rem;
