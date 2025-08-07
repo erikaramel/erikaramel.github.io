@@ -4,21 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Essentials</title>
+  
+  <!-- Icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
+
+  <!-- Police Google pour backup -->
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+
+  <!-- Police NoyhA perso -->
   <style>
+    @font-face {
+      font-family: 'NoyhA';
+      src: url('../fonts/NoyhA-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: url('../images/nuages.png') center/cover no-repeat;
+      font-family: 'NoyhA', 'Cherry Swash', sans-serif;
+      background: url('../images/nuages-pc.png') repeat;
+      background-size: 500px;
       background-attachment: fixed;
+      background-position: center top;
       text-align: center;
       padding: 2rem;
       color: #5c3b28;
     }
 
     h1 {
-      font-family: 'Cherry Swash', cursive;
       font-size: 2.5rem;
       color: #703d2c;
       margin-bottom: 0.5rem;
@@ -71,41 +85,46 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* ✅ Correction du fond mobile */
+    @media (max-width: 768px) {
+      body {
+        background: url('../images/nuages-mobile.png') repeat;
+        background-size: 500px;
+        background-attachment: local;
+        background-position: top center;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <h1>travel essentials</h1>
+
   <p class="subtitle">
     These are my must-haves to travel smarter, lighter, and stay connected on the road.  
     I bring them everywhere — hope they’ll help you too!
   </p>
 
   <div class="links">
-
-    <!-- eSIM -->
     <a href="https://go.saily.site/aff_c?offer_id=101&aff_id=10214" target="_blank">
       📱 Best eSIM for travelers  
       <small>-$5 with code ERIKAT4942 on your first eSIM</small>
     </a>
 
-    <!-- Revolut -->
     <a href="https://revolut.com/referral/?referral-code=erika4deu!AUG1-25-AR&geo-redirect" target="_blank">
       💳 No-fee travel card  
       <small>Up to €1000/month free</small>
     </a>
 
-    <!-- Wise -->
     <a href="https://wise.com/invite/ahpc/erikad657" target="_blank">
       💳 Low-fee travel card  
       <small>2 free ATM withdrawals per month</small>
     </a>
-
   </div>
 
   <footer>
     <a href="../index.html">← Back to homepage</a>
   </footer>
-
 </body>
 </html>

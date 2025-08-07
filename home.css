@@ -11,15 +11,18 @@ body {
   background: url('images/nuages-pc.png') repeat;
   background-size: 500px;
   background-attachment: fixed;
+  background-position: center top;
   color: #3e2c23;
   text-align: center;
 }
 
+/* ✅ Version mobile (fond plus stable, pas de zoom ni scroll weird) */
 @media (max-width: 768px) {
   body {
     background: url('images/nuages-mobile.png') repeat;
     background-size: 500px;
-    background-attachment: scroll;
+    background-attachment: local;  /* évite le zoom */
+    background-position: top center;
   }
 }
 
