@@ -8,16 +8,19 @@
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
-  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-fond.png') repeat;
-  background-size: 500px; /* taille par défaut */
+  background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-pc.png') repeat;
+  background-attachment: fixed;
+  background-size: 500px;
   color: #3e2c23;
   text-align: center;
 }
 
-/* Sur mobile : fond moins zoomé */
+/* Fond mobile différent */
 @media (max-width: 768px) {
   body {
+    background: url('https://raw.githubusercontent.com/erikaramell/assets/main/nuages-mobile.png') repeat;
     background-size: 300px;
+    background-attachment: fixed;
   }
 }
 
@@ -42,7 +45,6 @@ p {
   border-radius: 20px;
 }
 
-/* Liens principaux */
 .links {
   margin: 3rem auto;
   display: flex;
@@ -64,23 +66,21 @@ p {
   background: #5f3a29;
 }
 
-/* Icônes réseaux */
 .socials {
-  margin: 2rem auto;
+  margin: 2rem;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 1.5rem;
+  font-size: 2rem;
 }
 
 .socials a {
   color: #7a4e35;
-  font-size: 1.8rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .socials a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   color: #5f3a29;
 }
 
@@ -88,15 +88,4 @@ footer {
   margin-top: 2rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.8);
-}
-
-/* Taille du texte plus grande sur PC */
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 1.4rem;
-  }
 }
