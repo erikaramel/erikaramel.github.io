@@ -1,6 +1,6 @@
-/* ================================
-   Police personnalisée
-=================================== */
+/* ===================== */
+/* Police personnalisée  */
+/* ===================== */
 @font-face {
   font-family: 'NoyhA';
   src: url('/fonts/NoyhA-Regular.ttf') format('truetype');
@@ -8,41 +8,29 @@
   font-style: normal;
 }
 
-/* ================================
-   Fond nuages – commun
-   (utiliser <body class="bg-nuages">)
-=================================== */
+/* ===================== */
+/* Fond nuages           */
+/* ===================== */
 .bg-nuages {
-  background-image: url('/images/nuages-pc.png'); /* chemin absolu */
-  background-repeat: repeat;
-  background-position: center top;
+  background: url('images/nuages-pc.png') repeat;
+  background-size: 500px;
   background-attachment: fixed;
-  /* nuages + gros pour éviter l'effet "tapis" */
-  background-size: 1400px;
+  background-position: center top;
 }
 
-/* Ajuste la taille des nuages selon la largeur d’écran (desktop) */
-@media (min-width: 1600px) {
-  .bg-nuages { background-size: 1700px; }
-}
-@media (max-width: 1200px) {
-  .bg-nuages { background-size: 1100px; }
-}
-
-/* Mobile – fond stable, pas de zoom/glitch */
+/* Mobile – fond plus stable */
 @media (max-width: 768px) {
   .bg-nuages {
-    background-image: url('/images/nuages-mobile.png');
-    background-repeat: repeat;
+    background: url('images/nuages-mobile.png') repeat;
+    background-size: 500px;
+    background-attachment: local;
     background-position: top center;
-    background-attachment: local;   /* évite les bugs de scroll */
-    background-size: 900px;         /* nuages lisibles sur mobile */
   }
 }
 
-/* ================================
-   Style général
-=================================== */
+/* ===================== */
+/* Style général         */
+/* ===================== */
 body {
   margin: 0;
   font-family: 'NoyhA', "Segoe UI", sans-serif;
@@ -50,8 +38,12 @@ body {
   text-align: center;
 }
 
-/* Header */
-header { padding: 2rem 1rem; }
+/* ===================== */
+/* Header                */
+/* ===================== */
+header {
+  padding: 2rem 1rem;
+}
 
 /* Titres */
 h1 {
@@ -61,7 +53,9 @@ h1 {
 }
 
 /* Paragraphes */
-p { font-size: 1.2rem; }
+p {
+  font-size: 1.2rem;
+}
 
 /* Image principale */
 .hero {
@@ -71,7 +65,9 @@ p { font-size: 1.2rem; }
   border-radius: 20px;
 }
 
-/* Liens boutons */
+/* ===================== */
+/* Liens boutons         */
+/* ===================== */
 .links {
   margin: 3rem auto;
   display: flex;
@@ -90,30 +86,85 @@ p { font-size: 1.2rem; }
   transition: background-color 0.3s ease;
 }
 
-.links a:hover { background: #5f3a29; }
-
-/* Icônes sociales */
-.socials {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.links a:hover {
+  background: #5f3a29;
 }
 
-/* Footer */
+/* ===================== */
+/* Icônes sociales       */
+/* ===================== */
+.socials {
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.socials a {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #703d2c;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.socials a i {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.socials a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+/* ===================== */
+/* Footer                */
+/* ===================== */
 footer {
   margin-top: 2rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  padding: 0;
 }
 
-/* ================================
-   Version bureau – textes plus grands
-=================================== */
+footer p {
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #5c3b28;
+  text-wrap: balance;
+}
+
+/* ===================== */
+/* Version bureau        */
+/* ===================== */
 @media (min-width: 769px) {
-  body { font-size: 1.2rem; }
-  h1 { font-size: 4rem; }
-  p  { font-size: 1.4rem; }
-  .links a { font-size: 1.1rem; padding: 1.2rem; }
-  footer { font-size: 1.1rem; }
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .links a {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
 }
