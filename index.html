@@ -1,18 +1,32 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>erikaramel</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Footer font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Noyh A (your main font) */
     @font-face {
       font-family: 'NoyhA';
       src: url('fonts/NoyhA-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
+    }
+
+    :root{
+      --brown:#703d2c;
+      --brown-2:#5c3b28;
+      --brown-3:#8b5e3c;
     }
 
     body {
@@ -21,21 +35,21 @@
       background: url('images/nuages-pc.png') center/cover no-repeat fixed;
       text-align: center;
       padding: 2rem;
-      color: #5c3b28;
+      color: var(--brown-2);
     }
 
+    /* Mobile background settings */
     @media (max-width: 768px) {
-  body {
-    background: url('images/nuages-mobile.png') center repeat;
-    background-size: cover;
-    background-attachment: scroll; /* évite le zoom sur mobile */
-  }
-}
-
+      body {
+        background: url('images/nuages-mobile.png') center repeat;
+        background-size: cover;
+        background-attachment: scroll; /* prevents zoomy scroll on some phones */
+      }
+    }
 
     h1 {
       font-size: 3rem;
-      color: #703d2c;
+      color: var(--brown);
       margin-bottom: 0.3rem;
     }
 
@@ -61,7 +75,7 @@
     }
 
     .social-icons a {
-      color: #703d2c;
+      color: var(--brown);
       text-decoration: none;
       transition: transform 0.2s ease;
     }
@@ -72,7 +86,7 @@
 
     .links a {
       display: block;
-      background-color: #703d2c;
+      background-color: var(--brown);
       color: white;
       text-decoration: none;
       padding: 1rem;
@@ -85,15 +99,27 @@
     }
 
     .links a:hover {
-      background-color: #8b5e3c;
+      background-color: var(--brown-3);
     }
 
+    /* Footer small & subtle with Poppins */
     footer {
       margin-top: 2rem;
-      font-size: 0.95rem;
       line-height: 1.5;
-      padding: 0 1rem;
-      color: #5c3b28;
+      padding: 0 1rem 1.25rem;
+      color: var(--brown-2);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer .about {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    footer .legal {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin: 0.15rem 0;
     }
   </style>
 </head>
@@ -105,9 +131,9 @@
   <img src="images/venise.jpg" alt="Erika Venise" class="hero-img" />
 
   <div class="social-icons">
-    <a href="https://www.tiktok.com/@erikaramell" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/erikaramell" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:contact@erikaramel.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/erikaramell" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:contact@erikaramel.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </div>
 
   <div class="links">
@@ -115,14 +141,12 @@
   </div>
 
   <footer>
-    <p>Hi, I’m Erika, a travel and photography enthusiast.<br>
-    I’ve already visited 49 countries and I’m taking you with me for the next ones 🌍</p>
+    <p class="about">
+      Hi, I’m Erika, a travel and photography enthusiast.<br>
+      I’ve already visited 49 countries and I’m taking you with me for the next ones 🌍
+    </p>
 
-  
-    <p>contact@erikaramel.com/p>
-  
-  <p>© 2025 erikaramel — All rights reserved</p>
-  <p style="font-size: 0.9em;">Hand-coded with ☁️ & ☕</p>
+    <p class="legal">© 2025 erikaramel — All rights reserved</p>
   </footer>
 
 </body>
