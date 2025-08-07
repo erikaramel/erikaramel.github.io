@@ -2,33 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>erikaramel</title>
-  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: url('https://i.imgur.com/3zK7WMr.png'); /* fond nuages ghibli-like */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      text-align: center;
+      padding: 2rem;
+      color: #5c3b28;
+    }
+
+    h1 {
+      font-family: 'Cherry Swash', cursive;
+      font-size: 3rem;
+      color: #703d2c;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #5c3b28;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
+
+    .links a {
+      display: block;
+      background-color: #8b5e3c;
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      margin: 0.5rem auto;
+      border-radius: 30px;
+      max-width: 300px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #a56a4a;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      padding: 0 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>erikaramel</h1>
-    <p>Travel lover sharing dreamy places & useful tools ✈️</p>
-    <img src="blog/images/egypte.jpg" alt="Photo Erika sur chameau" class="hero" />
-  </header>
-
-  <div class="links">
-    <a href="https://www.saily.com/" target="_blank">📱 Best eSIM for Travel</a>
-    <a href="https://www.canon.fr/" target="_blank">📷 test button</a>
-    <a href="https://www.booking.com/" target="_blank">🏨 To Find Cheap Hotel</a>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/erikaramell" target="_blank">📷</a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank">🎵</a>
+    <a href="mailto:contact@erikaramel.com">📧</a>
+    <a href="/blog/index.html">✨</a>
   </div>
 
-  <div class="socials">
-    <a href="https://www.instagram.com/erikaramell" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@erikaramell" target="_blank">TikTok</a>
-    <a href="mailto:contact@erikaramel.com">Email</a>
-    <a href="/blog/index.html">Mon blog ✨</a>
+  <h1>erikaramel</h1>
+  <p class="subtitle">Travel lover sharing dreamy places & useful tools for fellow explorers</p>
+
+  <img src="blog/images/egypte.jpg" alt="Photo Erika sur chameau" class="hero-img" />
+
+  <div class="links">
+    <a href="https://www.saily.com/" target="_blank">MY TOP TRAVEL TOOLS</a>
+    <a href="https://www.canon.fr/" target="_blank">MY FAVORITE CAMERA</a>
+    <a href="https://www.booking.com/" target="_blank">TO FIND CHEAP HOTEL</a>
   </div>
 
   <footer>
-    <p>Moi c’est Erika, passionnée de voyages, de photo, et de skincare.<br>
-    J’ai déjà visité 48 pays — et je t’emmène avec moi pour les prochains 🌍</p>
+    <p>Hi, I’m Erika, a travel and photography enthusiast. I’ve already visited 48 countries — and I’m taking you with me for the next ones.</p>
   </footer>
 </body>
 </html>
