@@ -1,9 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>erikaramel</title>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MC8CRXMS');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -43,7 +51,7 @@
       body {
         background: url('images/nuages-mobile.png') center repeat;
         background-size: cover;
-        background-attachment: scroll; /* évite l'effet de zoom au scroll */
+        background-attachment: scroll;
       }
     }
 
@@ -102,9 +110,8 @@
       background-color: var(--brown-3);
     }
 
-    /* --- Intro section (moved out of footer) --- */
     .intro {
-      font-family: 'NoyhA', sans-serif; /* on force ta police ici */
+      font-family: 'NoyhA', sans-serif;
       font-size: 1.1rem;
       line-height: 1.6;
       max-width: 720px;
@@ -112,7 +119,6 @@
       padding: 0 1rem;
     }
 
-    /* Footer minimal & discrete */
     footer {
       margin-top: 1.25rem;
       padding-bottom: 1rem;
@@ -128,6 +134,11 @@
 </head>
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC8CRXMS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <h1>erikaramel</h1>
   <p class="subtitle">Travel lover sharing dreamy places & useful tools for fellow explorers</p>
 
@@ -140,10 +151,9 @@
   </div>
 
   <div class="links">
-    <a href="/essentials">MY TOP TRAVEL TOOLS</a>
+    <a id="essentials-link" href="/essentials">MY TOP TRAVEL TOOLS</a>
   </div>
 
-  <!-- Intro moved here -->
   <p class="intro">
     Hi, I’m Erika, a travel and photography enthusiast. I’ve already visited 49 countries and I’m taking you with me for the next ones 🌍
   </p>
