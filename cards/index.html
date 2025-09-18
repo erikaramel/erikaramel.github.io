@@ -17,32 +17,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    @font-face {
-      font-family: 'NoyhA';
-      src: url('../fonts/NoyhA-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+    @font-face { font-family: 'NoyhA'; src: url('../fonts/NoyhA-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; font-display: swap; }
 
     :root{
-      --brown:#703d2c;
-      --brown-2:#5c3b28;
-      --brown-3:#8b5e3c;
-      --card-bg:rgba(255,255,255,.85);
+      --brown:#703d2c; --brown-2:#5c3b28; --brown-3:#8b5e3c; --card-bg:rgba(255,255,255,.85);
     }
-
     body{
-      margin:0; font-family:'NoyhA',sans-serif;
+      margin:0; font-family:'NoyhA',sans-serif; color:var(--brown-2);
       background:url('../images/nuages-pc.png') center/cover no-repeat fixed;
-      text-align:center; padding:2rem; color:var(--brown-2);
+      text-align:center; padding:2rem;
     }
     @media (max-width:768px){
       body{ background:url('../images/nuages-mobile.png') center/cover no-repeat fixed; }
     }
 
     h1{ font-size:3rem; color:var(--brown); margin-bottom:.3rem; text-transform:lowercase; }
-    .subtitle{ font-size:1.2rem; margin-bottom:1.5rem; max-width:820px; margin:0 auto; }
+    .subtitle{ font-size:1.2rem; margin-bottom:1.2rem; max-width:820px; margin:0 auto; }
 
     .note{
       max-width:820px; margin:0 auto 1.2rem; line-height:1.55;
@@ -56,8 +46,9 @@
       font-weight:bold; font-size:1rem; transition:background-color .3s;
     }
     .links a:hover{ background-color:var(--brown-3); }
-    .links a small{ display:block; font-weight:normal; font-size:.9rem; margin-top:6px; opacity:.95; }
-    .badge{ float:right; background:#fff; color:var(--brown); border-radius:999px; padding:.15rem .55rem; font-weight:800; font-size:.8rem; }
+    .links p{
+      max-width:420px; margin:6px auto 16px; line-height:1.5;
+    }
 
     footer{ margin-top:1.25rem; padding-bottom:1rem; font-family:'Poppins',sans-serif; }
     .small-footer{ font-size:.8rem; opacity:.65; margin:.15rem 0; color:var(--brown-2); }
@@ -73,38 +64,38 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <h1>travel cards</h1>
-  <p class="subtitle">
-    Two cards I always recommend for travelers: <strong>Revolut</strong> and <strong>Wise</strong>.  
-    Here’s how I use them and why they’re useful.
-  </p>
+  <p class="subtitle">Revolut + Wise = la combo simple et pas chère pour voyager.</p>
 
   <div class="note">
-    💡 <strong>Quick tip:</strong> I usually keep <strong>both cards</strong>.  
-    <ul style="margin:6px 0 0 1.2rem;padding:0;">
-      <li>💳 <strong>Revolut</strong>: great for payments abroad and free currency exchange (up to a limit).</li>
-      <li>💳 <strong>Wise</strong>: cheaper for international transfers and handy when receiving money.</li>
-    </ul>
-    With both, you avoid hidden fees and always have a backup card in case one doesn’t work.
+    💡 <strong>Mon conseil&nbsp;:</strong> garde <strong>les deux cartes</strong>.  
+    Si l’une ne passe pas, tu as un backup. Et chacune a ses avantages (taux, retraits, transferts).  
+    <span style="opacity:.85">Les limites peuvent varier selon le pays/le plan — vérifie dans l’app.</span>
   </div>
 
   <div class="links">
     <!-- Revolut -->
     <a href="https://revolut.com/referral/?referral-code=erika4deu!AUG1-25-AR&geo-redirect" target="_blank" rel="noopener">
       💳 Get Revolut
-      <small>No-fee card for everyday spending abroad.</small>
     </a>
+    <p>
+      <strong>Jusqu’à 1000 €</strong> de change gratuit par mois + <strong>200 €</strong> de retraits aux DAB sans frais*.<br>
+      Idéale pour payer à l’étranger au taux du marché.
+    </p>
 
     <!-- Wise -->
     <a href="https://wise.com/invite/ahpc/erikad657" target="_blank" rel="noopener">
       💳 Get Wise
-      <small>Low-fee card + cheap international transfers.</small>
     </a>
+    <p>
+      <strong>Frais de change très bas</strong> + <strong>2 retraits gratuits par mois</strong>.*  
+      En passant par mon lien, tu peux obtenir <strong>la carte gratuitement</strong>.
+    </p>
   </div>
 
   <footer>
     <a href="/essentials">← Back to travel essentials</a>
+    <p class="small-footer">* Les plafonds/frais exacts dépendent de ton pays et de ton plan.</p>
     <p class="small-footer">© 2025 erikaramel — All rights reserved</p>
-    <p class="small-footer">Hand-coded with ☁️ & ☕</p>
   </footer>
 </body>
 </html>
