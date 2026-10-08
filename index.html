@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>erikaramel</title>
+  <meta name="description" content="Hi, I'm Erika, travel & photography lover. 50 countries visited, dreamy places and useful tools for fellow explorers.">
+  <meta property="og:title" content="erikaramel">
+  <meta property="og:description" content="Hi, I'm Erika, travel & photography lover. 50 countries visited, dreamy places and useful tools for fellow explorers.">
+  <meta property="og:image" content="https://erikaramel.com/images/lijiang.jpg">
+  <meta property="og:url" content="https://erikaramel.com/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -12,9 +20,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MC8CRXMS');</script>
   <!-- End Google Tag Manager -->
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -25,7 +30,7 @@
     /* Noyh A (main font) */
     @font-face {
       font-family: 'NoyhA';
-      src: url('fonts/NoyhA-Regular.ttf') format('truetype');
+      src: url('fonts/NoyhA-Regular.woff2') format('woff2'), url('fonts/NoyhA-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -37,10 +42,12 @@
   --blue-3:#3b5f78;
     }
 
+    html { min-height: 100%; }
+
     body {
       margin: 0;
       font-family: 'NoyhA', sans-serif;
-      background: url('images/nuages-pc.png') center/cover no-repeat fixed;
+      background: url('images/nuages-pc.jpg') center/cover no-repeat fixed;
       text-align: center;
       padding: 2rem;
       color: var(--blue-2);
@@ -49,7 +56,7 @@
     /* Mobile background settings */
     @media (max-width: 768px) {
       body {
-        background: url('images/nuages-mobile.png') center repeat;
+        background: url('images/nuages-mobile.jpg') center no-repeat;
         background-size: cover;
         background-attachment: scroll;
       }
@@ -70,6 +77,7 @@
     .hero-img {
       max-width: 100%;
       width: 320px;
+      height: auto;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       margin-bottom: 1.5rem;
@@ -145,12 +153,12 @@
   <h1>erikaramel</h1>
   <p class="subtitle">Travel lover sharing dreamy places & useful tools for fellow explorers</p>
 
-  <img src="images/lijiang.jpg" alt="Erika Lijiang" class="hero-img" />
+  <img src="images/lijiang.jpg" alt="Erika in Lijiang, China" width="320" height="314" class="hero-img" />
 
   <div class="social-icons">
-    <a href="https://www.tiktok.com/@erikaramell" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/erikaramell" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@erikaramell" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@erikaramell" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/erikaramell" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@erikaramell" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="mailto:contact@erikaramel.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </div>
 
@@ -165,7 +173,7 @@
   </p>
 
   <footer>
-    <p class="small-footer">© 2025 erikaramel — All rights reserved</p>
+    <p class="small-footer">© 2026 erikaramel — All rights reserved</p>
   </footer>
 
 </body>
